@@ -1,0 +1,117 @@
+/* CSS File for Cass Aleatory's Portfolio */
+@charset "UTF-8";
+
+
+body {
+	background-color: #343434;
+	color: white;
+}
+
+h1 {
+	font-family: 'Merienda One', Cursive;
+	-webkit-text-fill-color: white;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+}
+
+h2, article p, footer {
+	padding-left: 1%;
+}
+
+article {
+	padding-bottom: 30px;
+}
+
+h3, h4 {
+	color: orange;
+	border-bottom: 2pt solid orange;
+	border-top: 2pt solid orange;
+	padding-bottom: 5px;
+}
+
+h2, h3, h4, h5, h6 {
+	font-family: 'Arvo', serif;
+}
+
+p {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+a:link {
+	color: orange;
+	text-decoration: none;
+}
+
+footer {
+	background-color: black;
+	text-align: center;
+	padding-left: 0px;
+	height: 140px;
+	width: 100%;
+	clear: right;
+}
+
+footer img {
+	width: 50px;
+	height: 50px;
+}
+
+.gallery {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: space-between;
+	padding-bottom: 10px;
+}
+
+.project {
+	border-radius: 8px;
+	background-color: black;
+	width: 400px;
+	height: 475px;
+	margin: 0px 20px 20px 0px;
+	color: white;
+	font-family: 'Arvo', serif;
+	position: relative;
+}
+
+.project div {
+	padding: 10px;
+}
+
+.project img {
+	width: 400px;
+}
+
+.btn-outline-warning {
+	position: absolute;
+	bottom: 10px;
+    left: 10px;
+	font-size: 18px;
+}
+
+.jumbotron {
+	background-image: url(images/gradient_background.png);
+	color: white;
+}
+
+.socialmedia{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	align-content: space-between;
+}
+
+.mediaicon {
+	width: 50px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: auto;
+  	margin-right: auto;
+}
+
+.mediaicon:hover {
+	transform: scale(1.5, 1.5);
+	background-color: rgba(0,0,0,0.5);
+}
