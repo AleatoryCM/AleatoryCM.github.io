@@ -1,118 +1,284 @@
 /* CSS File for Cass Aleatory's Portfolio */
 @charset "UTF-8";
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 body {
-	background-color: #343434;
-	color: white;
+  --title-color: #5B53B4;
+  --text-color: black;
+
+  --link-color: purple;
+  --link-hover-color: #D07BF4;
+    
+  --bkg-color: #E2DCF2;
+  --sub-bkg-color: whitesmoke;
+  --border-color: #947BF4;
+
+  background-color: var(--bkg-color);
+  color: var(--text-color);
+  position: relative;
+  overscroll-behavior-y: none;
+  overscroll-behavior-x: none;
+}
+
+h1,
+h2 {
+  font-family: 'Merienda One', Cursive;
+  padding-bottom: 0rem;
+  text-shadow: 0 0 1rem var(--title-color);
+  -webkit-text-fill-color: var(--title-color);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--border-color);
 }
 
 h1 {
-	font-family: 'Merienda One', Cursive;
-	-webkit-text-fill-color: white;
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: black;
+  --h1-font-size: clamp(3.4rem, calc(1.2rem + 0.72vw), 3.2rem);
+  font-size: var(--h1-font-size);
 }
 
-h2, article p, footer {
-	padding-left: 1%;
+h2 {
+  --h2-font-size: clamp(1.73rem, calc(1.54rem + 0.92vw), 2.2rem);
+  font-size: var(--h2-font-size);
+}
+
+h3 {
+  --h3-font-size: clamp(1.3rem, calc(1.23rem + 0.5vw), 1.62rem);
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+}
+
+h4 {
+  --h4-font-size: clamp(1.2rem, calc(1.12rem + 0.4vw), 1.41rem);
+  font-size: var(--h4-font-size);
+  color: var(--text-color);
+}
+
+h5 {
+  --h5-font-size: clamp(1.2rem, calc(1.05rem + 0.21vw), 1.09rem);
+  font-size: var(--h5-font-size);
+  color: var(--text-color);
+}
+
+h3, 
+h4, 
+h5, 
+h6 {
+  font-family: 'Arvo', serif;
 }
 
 article {
-	padding-bottom: 30px;
+  width: 100%;
+  position: relative;
 }
 
-h3, h4 {
-	color: orange;
-	border-bottom: 2pt solid orange;
-	border-top: 2pt solid orange;
-	padding-left: 1%;
-	padding-bottom: 5px;
+section {
+  width: 90%;
+  padding: 3%;
+  background-color: var(--sub-bkg-color);
+  border: .5rem solid var(--border-color);
+  border-radius: 20px;  
+  margin: auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
-h2, h3, h4, h5, h6 {
-	font-family: 'Arvo', serif;
+nav {
+  background-color: var(--sub-bkg-color);
 }
 
-p {
-	font-family: 'Source Sans Pro', sans-serif;
-}
-
-a:link {
-	color: orange;
-	text-decoration: none;
+header,
+footer {
+  overflow: hidden;
+  background-size: 200% 200%;  
 }
 
 footer {
-	background-color: black;
-	text-align: center;
-	padding-left: 0px;
-	height: 140px;
-	width: 100%;
-	clear: right;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  border-top: .5rem solid var(--border-color);
+  background-color: var(--sub-bkg-color);
 }
 
 footer img {
-	width: 50px;
-	height: 50px;
+  width: 50px;
+  height: 50px;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: var(--text-color);
+  --p-font-size: clamp(1rem, calc(0.95rem + 0.24vw), 1.13rem);
+  font-size: var(--p-font-size);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: none;
+}
+
+nav a {
+  display: inline-block;
+  vertical-align: middle;
+  color: var(--link-color) !important;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+nav a:hover,
+.active {
+  color: var(--link-hover-color) !important;
+}
+
+.navbar {
+  border-bottom: .5rem solid var(--border-color);
+}
+
+.nav-item {
+  line-height: 4rem;
+}
+
+.navbar-collapse {
+  padding-bottom: 20px;
+}
+
+.dropdown-item a {
+  text-align:left important!;
+}
+
+#logo {
+  max-height: 10rem;
+  padding: 1rem;
+}
+
+.pagelayout {
+  overflow: hidden;
+  max-width: 72rem /* 1152px */;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem /* 16px */;
+  padding-right: 1rem /* 16px */;
+}
+
+@media (min-width: 640px) {
+  .pagelayout {
+    padding-left: 1.5rem /* 24px */;
+    padding-right: 1.5rem /* 24px */;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page {
+    padding-left: 2rem /* 32px */;
+    padding-right: 2rem /* 32px */;
+  }
 }
 
 .gallery {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	align-content: space-between;
-	padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-between;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 .project {
-	border-radius: 8px;
-	background-color: black;
-	width: 400px;
-	height: 475px;
-	margin: 0px 20px 20px 0px;
-	color: white;
-	font-family: 'Arvo', serif;
-	position: relative;
+  border-radius: 8px;
+  background-color: var(--bkg-color);
+  width: 400px;
+  height: 475px;
+  margin: 0px 20px 20px 0px;
+  font-family: 'Arvo', serif;
+  position: relative;
 }
 
 .project div {
-	padding: 10px;
+  padding: 10px;
+}
+
+.project p {
+  color: var(--text-color);
+}
+
+.project h6 {
+  color: var(---bkg-color);
+}
+
+.project a {
+  color: var(--sub-bkg-color);
+}
+
+.project a:hover {
+  color: lightblue;
 }
 
 .project img {
-	width: 400px;
+  width: 400px;
 }
 
-.btn-outline-warning {
-	position: absolute;
-	bottom: 10px;
-    left: 10px;
-	font-size: 18px;
+.btn-primary {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 18px;
 }
 
-.jumbotron {
-	background-image: url(images/gradient_background.png);
-	color: white;
+a .btn {
+  color: var(--sub-bkg-color);
 }
 
 .socialmedia{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	align-items: center;
-	align-content: space-between;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-between;
 }
 
 .mediaicon {
-	width: 50px;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	margin-left: auto;
-  	margin-right: auto;
+  width: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mediaicon:hover {
-	transform: scale(1.5, 1.5);
-	background-color: rgba(0,0,0,0.5);
+  transform: scale(1.5, 1.5);
+}
+
+/* Avoid overlapping the iOS Safari bottom bar */
+.tabbar {
+  position: fixed;
+  bottom: 0;
+  bottom: env(safe-area-inset-bottom);
+}
+
+/* Avoid Safari clipping bottom bar */
+@supports (-webkit-touch-callout: none) {
+  body {
+    /* The hack for Safari */
+    height: -webkit-fill-available;
+  }
 }
