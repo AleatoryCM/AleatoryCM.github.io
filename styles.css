@@ -91,6 +91,7 @@ section {
 }
 
 nav {
+  height: 10;
   background-color: var(--sub-bkg-color);
 }
 
@@ -165,7 +166,7 @@ nav a:hover,
   text-align:left important!;
 }
 
-#logo {
+.logo {
   max-height: 10rem;
   padding: 1rem;
 }
